@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="author" content="Samuel Amagbakhen">
+<meta name="description" content="signup page">
+
+<head>
+
+    <style type="text/css">
+        /*Style sheet*/
+
+        @font-face {
+            font-family: helvetica;
+            src: url(helvetica-rounded-bold-5871d05ead8de.otf)
+        }
+
+        body {
+            font-family: helvetica;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid grey;
+        }
+
+        li {
+            list-style: none;
+            padding-bottom: 1%;
+            color: darkgrey;
+        }
+
+        #pay {
+
+            border-bottom: 2px solid #2CABE1;
+            color: #2CABE1;
+        }
+
+        #card {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            background-image: linear-gradient(to right, #0D90E1, #2C41E1);
+            width: 30%;
+            border-radius: 4px;
+            height: 200px;
+            box-shadow: 0px 9px 10px 5px #978A8A;
+        }
+
+        #card>p,
+        h3 {
+            color: #D6E1CB;
+        }
+
+        h3,
+        #text2 {
+            align-self: flex-end;
+            margin-right: 15px;
+        }
+
+        #cardnumber {
+            align-self: center;
+            font-size: 12px;
+            letter-spacing: 0.6em;
+        }
+
+        span {
+            margin-left: 4px;
+        }
+
+        #lastd {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #goldpin {
+            width: 40px;
+            background-color: #E1DE96;
+            border-radius: 3px;
+            height: 30px;
+            margin-left: 5px;
+        }
+
+        #wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            flex-grow: 1;
+            align-items: center;
+        }
+
+        #form {
+            padding-right: 16%;
+
+        }
+
+        label {
+            font-size 10px;
+            color: darkgrey;
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+            font-family: helvetica;
+        }
+
+        input:focus {
+            border-bottom: 1px solid #2CABE1;
+
+        }
+
+        #confirmation {
+            display: flex;
+        }
+        
+        #confirmation1{
+            margin-right: 4%;
+        }
+
+        button {
+            border: none;
+            background-image: linear-gradient(to right, #0D90E1, #2C41E1);
+            padding: 4% 20%;
+            font-family: inherit;
+            color: white;
+            border-radius: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li> YOUR ORDER</li>
+        <li> SHIPPING DETAILS</li>
+        <li id="pay"> PAYMENT DETAILS</li>
+        <li> CONFIRMATION</li>
+
+    </ul>
+
+    <div id="wrapper">
+
+        <div id="card">
+            <!--DEBIT CARD-->
+            <h3> VISA </h3>
+            <div id="goldpin">
+            </div>
+
+            <p id="cardnumber"> 1456 1298 6574 1287</p>
+
+            <p id="lastd"> <span> John Smith </span> <span id="text2"> 02/22</span></p>
+
+        </div>
+
+        <div id="form">
+            <h2> Payment Details</h2>
+            <label for="name"> Name on Card </label>
+            <p> <input type="text" id="name"> </p>
+
+            <label for="cardnumber"> Card number </label>
+            <p> <input type="text" id="name" max="16"> </p>
+
+            <div id="confirmation">
+                <div id="confirmation1">
+                    <label for="validity"> Valid Through </label>
+                    <p> <input type="text" id="validity"> </p>
+                </div>
+
+                <div id="confirmation2">
+                    <label for="cvv"> CVV </label>
+                    <p> <input type="text" id="cvv"> </p>
+                </div>
+            </div>
+            <button type="button"> PAY $450.00 </button>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
